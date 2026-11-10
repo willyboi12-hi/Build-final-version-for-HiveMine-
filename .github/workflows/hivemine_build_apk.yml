@@ -144,11 +144,14 @@ jobs:
             sed -i 's/ui.body("Hands-free mode keeps listening for short natural phrases while the foreground voice service is active. Android shows a microphone privacy indicator and the service uses extra battery\.", Ui.MUTED, 10, false)/ui.body("Hands-free mode keeps listening for short natural phrases while the foreground voice service is active. Android shows a microphone privacy indicator and the service uses extra battery.")/g' "$MAIN_ACTIVITY"
           fi
 
-          # 2. Fix missing ObservationFreshness import in MacroAccessibilityService.java
+          # 2. Fix missing imports in MacroAccessibilityService.java
           MACRO_SERVICE=$(find . -type f -name "MacroAccessibilityService.java" -print -quit)
           if [ -f "$MACRO_SERVICE" ]; then
             if ! grep -q "import com.hiveminemobile.ai.control.ObservationFreshness;" "$MACRO_SERVICE"; then
               sed -i '/package com.hiveminemobile;/a import com.hiveminemobile.ai.control.ObservationFreshness;' "$MACRO_SERVICE"
+            fi
+            if ! grep -q "import android.content.Context;" "$MACRO_SERVICE"; then
+              sed -i '/package com.hiveminemobile;/a import android.content.Context;' "$MACRO_SERVICE"
             fi
           fi
 
