@@ -162,6 +162,12 @@ jobs:
             fi
           fi
 
+          # 4. Fix HiveMineContract filename mismatch
+          CONTRACT_FILE=$(find . -type f -name "HiveMineMobileContract.java" -print -quit)
+          if [ -f "$CONTRACT_FILE" ]; then
+            mv "$CONTRACT_FILE" "$(dirname "$CONTRACT_FILE")/HiveMineContract.java"
+          fi
+
       - name: Build HiveMine debug APK
         shell: bash
         run: |
