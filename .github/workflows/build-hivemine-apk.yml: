@@ -1,0 +1,51 @@
+project:
+  name: "HiveMine Mobile"
+  version: "1.0"
+  description: "Advanced Android automation and AI-driven macro application featuring a dedicated AI core module and accessibility integration.[span_0](start_span)"[span_0](end_span)
+  build_system:
+    system: "Gradle"
+    ci_cd: "GitHub Actions (Java 17, Android SDK 36)"
+    languages: ["Java", "C++ (WebAssembly & VFS infrastructure patterns)"]
+
+modules:
+  app:
+    description: "Main Android application module handling user interfaces, accessibility services, and runtime execution.[span_1](start_span)"[span_1](end_span)
+    key_components:
+      - "MainActivity.java"
+      - "MacroAccessibilityService.java"
+      - "AiControlHub.java"
+      - "VoiceCommandRouter.java"
+      - "OvernightManager.java"
+      - "OverlayWindowManager.java"
+      - "PremiumDashboardView.java"
+
+  ai_core:
+    description: "Core intelligence module housing decentralized specialists, vision pipelines, and execution control loops.[span_2](start_span)"[span_2](end_span)
+    subsystems:
+      - name: "optimize"
+        purpose: "Performance profiling, path cost modeling, load shedding, and batch decision optimization.[span_3](start_span)"[span_3](end_span)
+      - name: "automation"
+        purpose: "State machines, action planners, recovery coordinators, and safety interlocks.[span_4](start_span)"[span_4](end_span)
+      - name: "vision"
+        purpose: "World state analysis, player position tracking, calibration wizards, and template digit OCR.[span_5](start_span)"[span_5](end_span)
+      - name: "quest"
+        purpose: "Quest objectives, OCR pipelines, text parsers, and field planners.[span_6](start_span)"[span_6](end_span)
+      - name: "farming"
+        purpose: "Resource planning, pollen tracking, strategy performance ledgers, and simulations.[span_7](start_span)"[span_7](end_span)
+      - name: "manager"
+        purpose: "Decentralized manager intelligence loops, conflict resolvers, decision fusion, and specialist arbiters.[span_8](start_span)"[span_8](end_span)
+      - name: "modules"
+        purpose: "Domain specialists including FarmingAI, NavigationAI, SafetyAI, VisionAI, QuestAI, SecurityAI, and TokenAI.[span_9](start_span)"[span_9](end_span)
+      - name: "shared"
+        purpose: "Model routing, event bus, resource allocation, persistent memory stores, and knowledge graphs.[span_10](start_span)"[span_10](end_span)
+
+testing_and_qa:
+  framework: "JUnit and custom Android test fakes"
+  test_suites:
+    - "Unit Tests (Navigation, Loot, Session, Persistent Memory, Subsystems)[span_11](start_span)"[span_11](end_span)
+    - "AI Integration & Verification Checks (Route guards, Quality gates, OCR pipelines)[span_12](start_span)"[span_12](end_span)
+    - "Infrastructure Tests (Automation, Model routers, Manager architecture)[span_13](start_span)"[span_13](end_span)
+
+release_and_documentation:
+  current_phase: "Initial stable release preparation"
+  documentation_archive: "Extensive phase ledgers, integration guides, and feature passes[span_14](start_span)"[span_14](end_span)
